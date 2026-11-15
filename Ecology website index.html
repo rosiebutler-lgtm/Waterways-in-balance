@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waterways in Balance | Year 9 Science</title>
+<style>
+:root{
+ --ink:#294b50;--deep:#245c63;--teal:#5f9c98;--pale:#eaf4ed;
+ --blue:#dceef0;--sand:#f7efd9;--coral:#d98f79;--leaf:#8cae8b;
+ --paper:#fffdf7;--muted:#5e7472;--line:#d7e4dc;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:"Trebuchet MS",Arial,sans-serif;line-height:1.55;
+ background:
+ radial-gradient(ellipse at 8% 4%,rgba(169,205,185,.34),transparent 27%),
+ radial-gradient(ellipse at 94% 15%,rgba(165,207,216,.38),transparent 25%),
+ radial-gradient(ellipse at 80% 90%,rgba(239,210,169,.28),transparent 28%),#f5f7ef}
+header{padding:44px 20px 34px;text-align:center;position:relative;overflow:hidden;
+ background:linear-gradient(120deg,rgba(216,237,225,.86),rgba(221,239,242,.88),rgba(250,240,214,.8));
+ border-bottom:1px solid #d2e2d9}
+header:before,header:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);opacity:.4}
+header:before{width:250px;height:150px;background:#a9cbb2;left:-65px;top:-55px}
+header:after{width:260px;height:160px;background:#9fcbd1;right:-60px;bottom:-75px}
+.hero{position:relative;z-index:1;max-width:900px;margin:auto}
+.kicker{letter-spacing:.16em;text-transform:uppercase;font-size:.75rem;font-weight:bold;color:#537d78}
+h1{font-family:Georgia,serif;font-size:clamp(2.2rem,6vw,4rem);line-height:1.05;margin:10px 0;color:#285a60}
+.subtitle{font-family:Georgia,serif;font-size:1.2rem;max-width:760px;margin:12px auto 20px}
+.pill{display:inline-block;background:#fffdf0cc;border:1px solid #c9dcd1;border-radius:99px;padding:7px 14px;font-size:.86rem}
+nav{position:sticky;top:0;z-index:10;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px;background:#f8fbf4ed;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav a{color:var(--deep);text-decoration:none;font-weight:bold;font-size:.9rem;padding:7px 12px;border-radius:20px}
+nav a:hover,nav a:focus{background:#dcece5;outline:2px solid transparent}
+main{max-width:1060px;margin:26px auto;padding:0 18px 60px}
+section{scroll-margin-top:82px;margin:22px 0 30px}
+.section-head{display:flex;align-items:center;gap:12px;margin-bottom:13px}
+.section-head .num{background:#d9e9df;color:#356d68;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;font-weight:bold}
+h2{font-family:Georgia,serif;color:#285d62;font-size:1.8rem;margin:0}
+h3{font-family:Georgia,serif;color:#356a68;margin:0 0 8px;font-size:1.25rem}
+p{margin:.4em 0 .7em}
+.card{background:#fffefaeb;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 7px 22px #426b5910}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tint-blue{background:linear-gradient(145deg,#f7fcfa,#e5f2f3)}
+.tint-green{background:linear-gradient(145deg,#fbfdf6,#e8f1e4)}
+.tint-sand{background:linear-gradient(145deg,#fffdf5,#f6efd9)}
+.tint-pink{background:linear-gradient(145deg,#fffaf6,#f7e8df)}
+.small{font-size:.9rem;color:var(--muted)}
+.tag{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:#668b7e;font-weight:bold}
+ul{padding-left:1.2rem;margin:.45em 0}
+li{margin:.25em 0}
+.flow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap;margin-top:14px}
+.flow div{flex:1;min-width:130px;padding:13px;border-radius:13px;background:#e8f2ec;text-align:center}
+.flow b{display:block;color:#2d6668}
+.arrow{align-self:center;color:#78a49a;font-size:1.4rem}
+.term{border-bottom:1px dotted #6d9c91;cursor:help;font-weight:bold}
+.callout{border-left:5px solid var(--coral);background:#fff4eb;padding:12px 15px;border-radius:0 12px 12px 0;margin:12px 0}
+details{background:#fffefa;border:1px solid var(--line);border-radius:13px;padding:13px 16px;margin:9px 0}
+summary{cursor:pointer;font-weight:bold;color:#31676a}
+button{border:0;border-radius:22px;background:#3e817d;color:white;padding:10px 16px;font-weight:bold;cursor:pointer;font:inherit}
+button:hover{background:#2e6968}
+button.secondary{background:#e2eee7;color:#315e5b}
+button:focus,input:focus,textarea:focus{outline:3px solid #e5b79d;outline-offset:2px}
+table{width:100%;border-collapse:collapse;background:#fffefa;border-radius:13px;overflow:hidden}
+th,td{text-align:left;padding:11px 12px;border-bottom:1px solid #e0e9e1;vertical-align:top}
+th{background:#e5f0e9;color:#315e5b}
+tr:last-child td{border-bottom:0}
+.data-note{font-size:.83rem;color:var(--muted);margin-top:8px}
+.choice{display:flex;gap:9px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #e8eee7}
+.choice input{margin-top:5px;accent-color:#4b8980}
+textarea,input[type=text]{width:100%;border:1px solid #c9d9d0;border-radius:10px;padding:10px;font:inherit;background:#fffefa;color:var(--ink)}
+textarea{min-height:78px;resize:vertical}
+.progress{height:9px;background:#e3ece5;border-radius:20px;overflow:hidden;margin:10px 0}
+.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#78a99a,#9dbb8d);transition:width .2s}
+footer{text-align:center;color:#648079;font-size:.85rem;padding:22px}
+.badge{display:inline-block;border-radius:9px;background:#f3ead7;padding:3px 8px;font-size:.8rem;color:#806b48}
+@media(max-width:720px){.grid,.grid.three{grid-template-columns:1fr}.flow{display:grid;grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}.card{padding:16px}nav{justify-content:flex-start}}
+@media print{nav,button{display:none}body{background:white}.card{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+ <div class="hero">
+  <div class="kicker">Year 9 Science · Explore · Evaluate · Restore</div>
+  <h1>Waterways in Balance</h1>
+  <p class="subtitle">How do people change the way water moves through ecosystems — and what can we do to help waterways recover?</p>
+  <span class="pill">Your field guide for a restoration presentation</span>
+ </div>
+</header>
+<nav aria-label="Page sections">
+ <a href="#water">Water basics</a><a href="#impacts">Human impacts</a><a href="#restore">Restore</a>
+ <a href="#evidence">Evidence lab</a><a href="#challenge">Your presentation</a>
+</nav>
+<main>
+<section id="water">
+ <div class="section-head"><span class="num">1</span><h2>First, understand the water system</h2></div>
+ <div class="card tint-blue">
+  <p>Water is always moving across the land, soaking into the ground, being stored, and flowing through waterways. Healthy forests, wetlands and soils help regulate this movement.</p>
+  <div class="flow" aria-label="Water movement sequence">
+   <div><b>Rainfall</b><span class="small">Water enters the ecosystem</span></div><span class="arrow">→</span>
+   <div><b>Runoff</b><span class="small">Water flows over the land</span></div><span class="arrow">↔</span>
+   <div><b>Infiltration</b><span class="small">Water soaks into soil</span></div><span class="arrow">→</span>
+   <div><b>Storage</b><span class="small">Water is held in soil, wetlands and waterways</span></div>
+  </div>
+  <div class="grid" style="margin-top:16px">
+   <div><h3>Key science words</h3>
+    <p><span class="term" title="Water flowing over the land surface">Runoff</span> – water flowing over the land surface.</p>
+    <p><span class="term" title="Water entering and moving into soil">Infiltration</span> – water entering and moving into soil.</p>
+    <p><span class="term" title="Soil is worn away and transported by water or wind">Erosion</span> – soil is worn away and transported by water or wind.</p>
+   </div>
+   <div><h3>Nature's water helpers</h3>
+    <ul><li><b>Forests:</b> roots hold soil, vegetation slows runoff, leaf litter protects soil and roots create pathways for water to enter.</li>
+    <li><b>Wetlands:</b> slow water, store excess water, trap sediment and provide habitats.</li>
+    <li><b>Healthy soils:</b> allow infiltration, store water for plants, reduce runoff and help reduce erosion.</li></ul>
+   </div>
+  </div>
+  <p class="small"><b>Remember:</b> these natural features regulate water movement — they do not stop all runoff or erosion.</p>
+ </div>
+</section>
+
+<section id="impacts">
+ <div class="section-head"><span class="num">2</span><h2>How can human activity disrupt waterways?</h2></div>
+ <p>Explore each example. Notice the chain from the human activity, to a change in water movement or quality, to an effect on living things.</p>
+ <div class="grid">
+  <article class="card tint-sand"><span class="tag">Impact 1</span><h3>Drought</h3>
+   <p>Less water is available for plants and animals. Habitats may shrink and food sources become limited.</p>
+   <div class="badge">Water availability decreases</div>
+  </article>
+  <article class="card tint-pink"><span class="tag">Impact 2</span><h3>Wetland drainage</h3>
+   <p>Water storage and wetland habitats are lost. Water may move downstream faster and biodiversity can decrease.</p>
+   <div class="badge">Storage and habitat are lost</div>
+  </article>
+  <article class="card tint-green"><span class="tag">Impact 3</span><h3>Land clearing</h3>
+   <p>Fewer roots hold soil together. Runoff and erosion can increase, carrying sediment into streams.</p>
+   <div class="badge">Runoff and erosion can increase</div>
+  </article>
+  <article class="card tint-blue"><span class="tag">Impact 4</span><h3>Pollution</h3>
+   <p>Fertilisers, animal waste and sediment can enter waterways. Water quality declines and aquatic organisms may be harmed.</p>
+   <div class="badge">Water quality declines</div>
+  </article>
+ </div>
+ <div class="card" style="margin-top:14px">
+  <h3>Follow the cause-and-effect chain</h3>
+  <div class="flow">
+   <div><b>Human activity</b><span class="small">Native forest is cleared</span></div><span class="arrow">→</span>
+   <div><b>Water relationship changes</b><span class="small">Fewer roots and less vegetation cover</span></div><span class="arrow">→</span>
+   <div><b>Environmental effect</b><span class="small">Runoff and soil erosion may increase</span></div><span class="arrow">→</span>
+   <div><b>Ecosystem consequence</b><span class="small">Sediment enters streams, reducing water quality and damaging habitats</span></div>
+  </div>
+  <p class="callout">Use linking words in your presentation: <b>because · therefore · this can lead to · as a result</b>.</p>
+ </div>
+ <details><summary>Check your understanding: why might a stream become muddy after nearby trees are removed?</summary>
+  <p>Fewer roots hold the soil together and there is less vegetation to slow runoff. Rain can wash more soil away; sediment is carried into the stream, making the water muddy and potentially damaging aquatic habitats.</p>
+ </details>
+</section>
+
+<section id="restore">
+ <div class="section-head"><span class="num">3</span><h2>What can people do to restore waterways?</h2></div>
+ <p>Restoration works best when people repair damage, prevent further harm and keep caring for the ecosystem over time.</p>
+ <div class="grid three">
+  <div class="card tint-green"><span class="tag">Approach 1</span><h3>Restoration</h3>
+   <ul><li>Replant native trees and grasses beside streams.</li><li>Restore drained wetlands.</li><li>Re-establish native forest.</li></ul>
+   <p class="small"><b>How it helps:</b> roots hold soil, plants slow runoff, and wetlands store water and trap sediment.</p>
+  </div>
+  <div class="card tint-blue"><span class="tag">Approach 2</span><h3>Conservation</h3>
+   <ul><li>Protect native forests.</li><li>Create or maintain predator-free sanctuaries.</li><li>Limit development in sensitive habitats.</li></ul>
+   <p class="small"><b>How it helps:</b> protects ecosystems from further damage.</p>
+  </div>
+  <div class="card tint-sand"><span class="tag">Approach 3</span><h3>Long-term management</h3>
+   <ul><li>Monitor water quality.</li><li>Control invasive species.</li><li>Replant where vegetation has failed.</li></ul>
+   <p class="small"><b>How it helps:</b> checks progress and responds when problems remain.</p>
+  </div>
+ </div>
+ <div class="card tint-pink" style="margin-top:14px">
+  <h3>Kaitiakitanga — ongoing care</h3>
+  <p>Kaitiakitanga is a responsibility to care for the natural environment for current and future generations.</p>
+  <ul><li>Protect waterways and freshwater habitats.</li><li>Restore native forests and wetlands.</li><li>Monitor the health of local ecosystems.</li><li>Work together as a community, including whānau.</li><li>Take ongoing responsibility — not just complete a one-off activity.</li></ul>
+  <p class="small">Think about a local stream, wetland or green space: who should be involved, and how could the community contribute?</p>
+ </div>
+ <h3 style="margin-top:20px">Example: the Green Stream Project</h3>
+ <div class="card">
+  <p>A school and community group want to improve a stream running through farmland. Their proposal is to:</p>
+  <ul><li>Plant native trees and grasses along stream banks.</li><li>Fence livestock out of the stream.</li><li>Restore a small wetland beside the stream.</li><li>Monitor water quality and native vegetation over two years.</li></ul>
+  <div class="grid">
+   <div><b>Expected benefits</b><p class="small">Roots help hold soil together; plants slow runoff; wetlands store water and trap sediment; fencing reduces direct livestock access and contamination; improved habitat may support greater biodiversity.</p></div>
+   <div><b>Why combine actions?</b><p class="small">Different actions address different pressures. Monitoring over time helps the community check whether the changes are working.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="evidence">
+ <div class="section-head"><span class="num">4</span><h2>Evidence lab: how do we know?</h2></div>
+ <p>Scientists collect ecological evidence before and after restoration. No single indicator tells the whole story — use several measures over time.</p>
+ <div class="card">
+  <h3>Useful indicators to monitor</h3>
+  <table>
+   <thead><tr><th>Indicator</th><th>What it can tell us</th></tr></thead>
+   <tbody>
+    <tr><td>Water clarity</td><td>Amount of suspended sediment in water</td></tr>
+    <tr><td>Soil moisture</td><td>How much water is held in soil</td></tr>
+    <tr><td>Water infiltration</td><td>How easily water enters the soil</td></tr>
+    <tr><td>Stream bank erosion</td><td>Whether soil is being lost</td></tr>
+    <tr><td>Native plant cover</td><td>Whether vegetation is recovering</td></tr>
+    <tr><td>Species diversity</td><td>Whether biodiversity is improving</td></tr>
+   </tbody>
+  </table>
+ </div>
+ <div class="card tint-blue" style="margin-top:14px">
+  <h3>Green Stream: preliminary investigation data</h3>
+  <p class="small">Fictional data collected at three stream sites before restoration.</p>
+  <table>
+   <thead><tr><th>Indicator</th><th>Site A</th><th>Site B</th><th>Site C</th></tr></thead>
+   <tbody>
+    <tr><td>Native vegetation cover (%)</td><td>75</td><td>40</td><td>15</td></tr>
+    <tr><td>Water clarity (cm)</td><td>45</td><td>25</td><td>12</td></tr>
+    <tr><td>Stream bank erosion</td><td>Low</td><td>Medium</td><td>High</td></tr>
+    <tr><td>Aquatic insect groups observed</td><td>8</td><td>5</td><td>3</td></tr>
+   </tbody>
+  </table>
+  <p><b>What patterns do you notice?</b> Site A has the greatest vegetation cover and water clarity. Site C has the least vegetation, poorest clarity and greatest erosion. The pattern suggests a relationship — but does not prove cause and effect.</p>
+  <p class="small">Other possible influences include stream flow, soil type, rainfall, upstream land use and pollution.</p>
+ </div>
+ <div class="grid" style="margin-top:14px">
+  <div class="card tint-sand"><h3>Evidence</h3><p>Information collected through observations or measurements.</p></div>
+  <div class="card tint-pink"><h3>Uncertainty</h3><p>How confident we are that measurements or conclusions are accurate.</p></div>
+  <div class="card tint-green"><h3>Limitations</h3><p>Features of a study that restrict what we can conclude.</p></div>
+  <div class="card"><h3>Make the investigation stronger</h3><ul><li>Measure more sites along the stream.</li><li>Repeat measurements over time.</li><li>Measure several water-quality indicators, not just clarity.</li><li>Record native plant survival and growth.</li><li>Repeat biodiversity surveys using the same sampling method.</li></ul></div>
+ </div>
+ <div class="callout"><b>Important:</b> one water-clarity measurement at one location cannot show that the whole catchment has improved. Rainfall can affect clarity, and one measurement does not show a long-term trend.</div>
+ <details><summary>Why take measurements before and after restoration?</summary>
+  <p>Before measurements provide a baseline — a picture of conditions before action begins. After measurements allow scientists to compare conditions and identify changes over time. Rainfall, seasons and other changes can also influence results, so a comparison site can help scientists decide whether restoration is likely to have made a difference.</p>
+ </details>
+</section>
+
+<section id="challenge">
+ <div class="section-head"><span class="num">5</span><h2>Your presentation challenge</h2></div>
+ <div class="card tint-green">
+  <span class="tag">Your role</span><h3>You are an ecological advisor!</h3>
+  <p>Create a presentation explaining how humans can work to restore waterways. Use the information and Green Stream evidence on this webpage to make a justified recommendation.</p>
+  <h3>Suggested presentation structure</h3>
+  <ol>
+   <li><b>Introduce the issue:</b> explain one human activity that has changed a waterway or catchment.</li>
+   <li><b>Explain the science:</b> describe what happens to runoff, infiltration, water storage, erosion or water quality — then link this to biodiversity.</li>
+   <li><b>Recommend restoration:</b> describe at least two actions people could take and explain how each action could help.</li>
+   <li><b>Use evidence:</b> include at least two specific pieces of evidence from the Green Stream data.</li>
+   <li><b>Evaluate:</b> identify one limitation or uncertainty and explain what further evidence should be collected.</li>
+   <li><b>Connect to kaitiakitanga:</b> explain how people can continue caring for the waterway over time.</li>
+  </ol>
+ </div>
+ <div class="card" style="margin-top:14px">
+  <h3>Build your recommendation</h3>
+  <p class="small">Type notes into the boxes to plan your presentation. Your writing stays in this webpage while it is open. Use the print button to save or print your plan.</p>
+  <label for="issue"><b>1. The human activity / problem</b></label>
+  <textarea id="issue" placeholder="The waterway has been affected by…"></textarea>
+  <label for="actions"><b>2. My restoration actions and how they help</b></label>
+  <textarea id="actions" placeholder="I recommend… This could improve water relationships by…"></textarea>
+  <label for="evidenceNotes"><b>3. Evidence from the data (include at least two comparisons)</b></label>
+  <textarea id="evidenceNotes" placeholder="For example, Site A had… compared with Site C…"></textarea>
+  <label for="limits"><b>4. One limitation and further evidence needed</b></label>
+  <textarea id="limits" placeholder="One limitation is… To evaluate success, we should also measure…"></textarea>
+  <label for="kaitiakitanga"><b>5. How the community can show kaitiakitanga</b></label>
+  <textarea id="kaitiakitanga" placeholder="People can continue to care for the waterway by…"></textarea>
+  <div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:14px">
+   <button onclick="window.print()">Print / save my plan</button>
+   <button class="secondary" onclick="clearPlan()">Clear my notes</button>
+  </div>
+ </div>
+ <div class="card" style="margin-top:14px">
+  <h3>Presentation success checklist</h3>
+  <p class="small">Tick each item when your presentation includes it.</p>
+  <div class="progress"><span id="bar"></span></div><p class="small" id="count">0 of 7 complete</p>
+  <div id="checks">
+   <label class="choice"><input type="checkbox"> I identify a human activity that affects water relationships.</label>
+   <label class="choice"><input type="checkbox"> I explain a cause-and-effect chain using scientific vocabulary.</label>
+   <label class="choice"><input type="checkbox"> I describe at least two suitable restoration actions.</label>
+   <label class="choice"><input type="checkbox"> I explain how the actions could improve water movement or quality.</label>
+   <label class="choice"><input type="checkbox"> I use at least two specific pieces of ecological evidence.</label>
+   <label class="choice"><input type="checkbox"> I identify a limitation or uncertainty in the evidence.</label>
+   <label class="choice"><input type="checkbox"> I suggest further monitoring and include kaitiakitanga.</label>
+  </div>
+ </div>
+ <details><summary>Sentence starters to help explain and justify</summary>
+  <ul><li>“The human activity of… changes water movement by…”</li><li>“This affects biodiversity because…”</li><li>“I recommend… because the roots / wetland / vegetation will…”</li><li>“The data suggests… For example, Site… had… compared with Site…”</li><li>“One limitation of this evidence is…”</li><li>“To evaluate success, the community should measure… over…”</li></ul>
+ </details>
+ <details><summary>Teacher-style model recommendation (open after you have tried)</summary>
+  <p>I recommend that the community restores the stream banks by planting native vegetation and fencing livestock out of the stream. Plant roots will help hold the soil together, reducing erosion and the amount of sediment entering the water. Vegetation can also slow runoff and help water infiltrate into the soil.</p>
+  <p>The evidence supports this action because Site A had 75% native vegetation cover and 45 cm water clarity, compared with Site C, which had only 15% vegetation cover and 12 cm water clarity. This suggests that sites with more vegetation may have healthier stream conditions.</p>
+  <p>However, only three sites were investigated, so the results may not represent the whole catchment. The community should measure water clarity, erosion and native plant cover at more sites before and after restoration to see whether conditions improve.</p>
+ </details>
+</section>
+</main>
+<footer>Year 9 Science · Water, People & Ecosystem Restoration<br>Use evidence, explain your reasoning, and remember that ecosystem recovery takes time.</footer>
+<script>
+const boxes=[...document.querySelectorAll('#checks input')];
+function updateProgress(){const n=boxes.filter(x=>x.checked).length;document.getElementById('bar').style.width=(n/boxes.length*100)+'%';document.getElementById('count').textContent=n+' of '+boxes.length+' complete';}
+boxes.forEach(x=>x.addEventListener('change',updateProgress));
+function clearPlan(){if(confirm('Clear all the notes you have typed?')){['issue','actions','evidenceNotes','limits','kaitiakitanga'].forEach(id=>document.getElementById(id).value='');}}
+</script>
+</body>
+</html>
